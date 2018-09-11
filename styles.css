@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+body {
+    background-color: gainsboro; 
+}
+
+.title {
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 40px;
+}
+
+#add {
+    position: fixed;
+    top: 20px ;
+    right: 20px;
+    width: 90px;
+    height: 50px;
+    border-radius: 40px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    outline: none;
+}
+
+#delete {
+    position: fixed;
+    top: 90px;
+    right: 20px;
+    width: 90px;
+    height: 50px;
+    border-radius: 40px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    outline: none;
+}
+
+.addBtnDiv .test {
+    text-align: center;
+    margin: auto;
+}
+
+#addBtn {
+    width: 200px;
+    height: 50px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 22px;
+    border-radius: 15px;
+}
+

@@ -4,73 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="styles.css">
   <title>TODO</title>
 </head>
 <body>
-  <button id="btn">Add task</button>
-  <div id="content"></div>
+  <h1 class="title">Simple to do list</h1>
+  <button id="add">add</button>
+  <button id="delete">remove</button>
+  <div class="addBtnDiv">
+    <div id="list"></div>
+  </div>
 </body>
-<script>
-  let content = document.getElementById('content');
-  let addTaskBtn = document.getElementById('btn');
-  let taskCounter = 0;
-  addTaskBtn.addEventListener('click', addTask);
-  
-  function addTask() {
-    addTaskBtn.disabled=true;
-
-    let task = document.createElement('div');
-    content.appendChild(task);
-
-    let input = document.createElement('input');
-    task.appendChild(input);
-
-    let saveBtn = document.createElement('button');
-    task.appendChild(saveBtn);
-    saveBtn.textContent="Save";
-    saveBtn.id = taskCounter;
-    saveBtn.addEventListener("click", saveTask);
-    
-
-    let editBtn = document.createElement('button')
-    task.appendChild(editBtn);
-    editBtn.textContent="Edit";
-    editBtn.disabled=true;
-    editBtn.addEventListener("click", editTask);
-    
-
-    let removeBtn = document.createElement('button');
-    task.appendChild(removeBtn);
-    removeBtn.textContent="Delete";
-    removeBtn.disabled=true;
-    removeBtn.addEventListener('click', deleteTask);
-    
-
-    taskCounter++;
-  }
-
-  function saveTask() {
-    let taskText = event.currentTarget.previousSibling.value;
-    let text = document.createElement('span');
-    text.textContent = taskText;
-    event.currentTarget.parentNode.replaceChild(text, event.currentTarget.previousSibling);
-
-    addTaskBtn.disabled = false;
-    event.currentTarget.disabled=true;
-    event.currentTarget.parentNode.childNodes[2].disabled=false;
-    event.currentTarget.parentNode.childNodes[3].disabled=false;
-  }
-
-  function editTask() {
-    let taskText = event.currentTarget.parentNode.childNodes[0].value;
-    let input = document.createElement('input');
-    input.textContent = taskText;
-    event.currentTarget.parentNode.replaceChild(input, event.currentTarget.parentNode.childNodes[0]);
-  }
-
-  function deleteTask() {
-    event.currentTarget.parentNode.remove();
-  }
-  
-</script>
+<script src="script.js"></script>
 </html>
