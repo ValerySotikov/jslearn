@@ -17,35 +17,44 @@
   addTaskBtn.addEventListener('click', addTask);
   
   function addTask() {
+    addTaskBtn.disabled=true;
+
     let task = document.createElement('div');
     content.appendChild(task);
-    addTaskBtn.disabled=true;
 
     let input = document.createElement('input');
     task.appendChild(input);
 
-    let saveBtn = document.createElement('button')
-    saveBtn.textContent="Save";
+    let saveBtn = document.createElement('button');
     task.appendChild(saveBtn);
+    saveBtn.textContent="Save";
     saveBtn.id = taskCounter;
     saveBtn.addEventListener("click", saveTask);
     
 
     let editBtn = document.createElement('button')
+    task.appendChild(editBtn);
     editBtn.textContent="Edit";
     editBtn.disabled=true;
-    task.appendChild(editBtn);
+    editBtn.addEventListener("click", editTask);
+    
 
-    let removeBtn = document.createElement('button')
+    let removeBtn = document.createElement('button');
+    task.appendChild(removeBtn);
     removeBtn.textContent="Delete";
     removeBtn.disabled=true;
     removeBtn.addEventListener('click', deleteTask);
-    task.appendChild(removeBtn);
+    
 
     taskCounter++;
   }
 
   function saveTask() {
+    let taskText = event.currentTarget.previousSibling.value;
+    let text = document.createElement('span');
+    text.textContent = taskText;
+    event.currentTarget.parentNode.replaceChild(text, event.currentTarget.previousSibling);
+
     addTaskBtn.disabled = false;
     event.currentTarget.disabled=true;
     event.currentTarget.parentNode.childNodes[2].disabled=false;
@@ -53,7 +62,10 @@
   }
 
   function editTask() {
-
+    let taskText = event.currentTarget.parentNode.childNodes[0].value;
+    let input = document.createElement('input');
+    input.textContent = taskText;
+    event.currentTarget.parentNode.replaceChild(input, event.currentTarget.parentNode.childNodes[0]);
   }
 
   function deleteTask() {
