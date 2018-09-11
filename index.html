@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>TODO</title>
+</head>
+<body>
+  <button id="btn">Add task</button>
+  <div id="content"></div>
+</body>
+<script>
+  let content = document.getElementById('content');
+  let addTaskBtn = document.getElementById('btn');
+  let taskCounter = 0;
+  addTaskBtn.addEventListener('click', addTask);
+  
+  function addTask() {
+    let task = document.createElement('div');
+    content.appendChild(task);
+    addTaskBtn.disabled=true;
+
+    let input = document.createElement('input');
+    task.appendChild(input);
+
+    let saveBtn = document.createElement('button')
+    saveBtn.textContent="Save";
+    task.appendChild(saveBtn);
+    saveBtn.id = taskCounter;
+    saveBtn.addEventListener("click", saveTask);
+    
+
+    let editBtn = document.createElement('button')
+    editBtn.textContent="Edit";
+    editBtn.disabled=true;
+    task.appendChild(editBtn);
+
+    let removeBtn = document.createElement('button')
+    removeBtn.textContent="Delete";
+    removeBtn.disabled=true;
+    removeBtn.addEventListener('click', deleteTask);
+    task.appendChild(removeBtn);
+
+    taskCounter++;
+  }
+
+  function saveTask() {
+    addTaskBtn.disabled = false;
+    event.currentTarget.disabled=true;
+    event.currentTarget.parentNode.childNodes[2].disabled=false;
+    event.currentTarget.parentNode.childNodes[3].disabled=false;
+  }
+
+  function editTask() {
+
+  }
+
+  function deleteTask() {
+    event.currentTarget.parentNode.remove();
+  }
+  
+</script>
+</html>
