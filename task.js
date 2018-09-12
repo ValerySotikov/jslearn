@@ -47,7 +47,10 @@ export default class CreateTask {
 
     for (let i = 0; i < parentNode.childNodes.length; i++) {
         let childNode = parentNode.childNodes[i];
-        if (childNode.className === "taskInput") childNode.disabled = true;
+        if (childNode.className === "taskInput") {
+            childNode.style.backgroundColor = "lightgray";
+            childNode.disabled = true;
+        }
         if (childNode.className === "edit") childNode.disabled = false;
         if (childNode.className === "remove") childNode.disabled = false
     }
@@ -62,7 +65,10 @@ export default class CreateTask {
 
     for (let i = 0; i < parentNode.childNodes.length; i++) {
         let childNode = parentNode.childNodes[i];
-        if (childNode.className === "taskInput") childNode.disabled = false;
+        if (childNode.className === "taskInput") {
+            childNode.disabled = false;
+            childNode.style.backgroundColor = "white";
+        }
         if (childNode.className === "edit") childNode.disabled = true;
         if (childNode.className === "remove") childNode.disabled = true;
         if (childNode.className === "save") childNode.disabled = false;

@@ -54,29 +54,41 @@
     background-color: brown;
     margin: auto;
     margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: grey;
 }
 
 .taskInput {
     grid-column: 1;
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
+    border-radius: 10px;
+    margin-right: 10px;
+    outline: none;
 }
 
 .save {
     grid-column: 2;
     font-family: 'Poppins', sans-serif;
     font-size: 20px;
+    border-radius: 10px;
+    margin-right: 10px;
 }
 
 .edit {
     grid-column: 3;
     font-family: 'Poppins', sans-serif;
     font-size: 20px;
+    border-radius: 10px;
+    margin-right: 10px;
 }
 
 .remove {
     grid-column: 4;
     font-family: 'Poppins', sans-serif;
     font-size: 20px;
+    border-radius: 10px;
+    margin-right: 10px;
 }
 
