@@ -9,7 +9,9 @@ let deleteButton = document.querySelector('.delete');
 deleteButton.addEventListener('click', deleteTask);
 
 function addTask() {
-    new CreateTask({todolist});
+    addButton.disabled = true;
+    deleteButton.disabled = true;
+    new CreateTask({todolist, addButton, deleteButton});
 }
 
 function deleteTask() {
