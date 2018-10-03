@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
+.reg-form {
+  display: grid;
+  margin: auto;
+  width: 20em;
+  height: 16em;
+  border-radius: 1em;
+  border: 1px solid black;
+  background-image: linear-gradient(to right, #0000ff, #00ccff);
+}
+
+.input-field {
+  font-family: 'Ubuntu', sans-serif;
+  color: azure;
+  display: flex;
+  justify-content: space-between;
+  padding: .5em 1em;
+}
+
+.pass-input,
+.log-input {
+  height: 2em;
+  border: .5px solid black;
+  outline: none;
+  border-radius: 10px;
+  margin: auto;
+  width: 50%;
+  font-family: 'Ubuntu', sans-serif;
+  padding-left: 3%;
+}
+
+.pass-label,
+.log-label {
+  font-size: 1.8em;
+  width: 50%;
+  margin: auto;
+}
+
+.submit-btn {
+  width: 30%;
+  height: 2em;
+  border-radius: 0.5em;
+  margin: auto;
+  background-color: #00e87b;
+  border: 1px solid black;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 1em;
+  outline: none;
+}
+
+.reg-btn {
+  width: 10%;
+  height: 2em;
+  border-radius: 0.5em;
+  margin: auto;
+  background-color: #00e87b;
+  border: 1px solid black;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 1em;
+  outline: none;
+}
