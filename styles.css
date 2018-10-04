@@ -23,6 +23,7 @@ header {
   margin: auto;
   font-size: 1.2em;
   transition: 300ms;
+  cursor: pointer;
 }
 
 .login-btn:hover,
@@ -81,11 +82,12 @@ main {
   margin-right: 0;
   margin-top: 0;
   transition: .7s;
+  cursor: pointer;
 }
 
 .close-btn:hover {
-  transform: rotate(-90deg);
-  transition: .7s;
+  transform: rotate(-180deg);
+  transition: .3s;
 }
 
 .login-label,
@@ -146,6 +148,7 @@ main {
   outline: none;
   font-size: 1.2em;
   transition: .1s;
+  cursor: pointer;
 }
 
 .submit-login-btn {
