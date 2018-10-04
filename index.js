@@ -2,7 +2,6 @@ document.addEventListener('DOMContentLoaded', () => {
   new RegWindow({ elem: '.reg-btn' });
 });
 
-
 class RegWindow {
   constructor({ elem }) {
     this.elem = this.findElement(elem);
@@ -50,7 +49,11 @@ class RegWindow {
   }
 
   submitForm() {
-    console.log('Submitted');
+    let login = document.querySelector('.log-input').value;
+    let password = document.querySelector('.pass-input').value;
+    
+    if (login === "Valery S" && password === "123456") console.log('You\'re submitted!');
+    else console.log('Incorrect login or password!');
   }
 
   init() {

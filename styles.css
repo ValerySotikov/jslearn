@@ -60,3 +60,8 @@
   font-size: 1em;
   outline: none;
 }
+
+.reg-btn:active,
+.submit-btn:active {
+  background-color: #028802;
+}
