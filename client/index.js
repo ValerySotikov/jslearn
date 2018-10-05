@@ -64,7 +64,7 @@ class SignForm extends AuthForm {
   }
 
   template() {
-    return `<form action="" name="signform" method="post">
+    return `<form action="http:/127.0.0.1:3000/login/authorize/" name="signform" method="post">
               <div id="sign-form" class="sign-form">
                 <div id="form-title" class="form-title">Authorization</div>
                 <div>
@@ -98,7 +98,7 @@ class LoginForm extends AuthForm {
   }
 
   template() {
-    return  `<form action="" name="loginform" method="post">
+    return  `<form action="http:/127.0.0.1:3000/login/authenticate/" name="loginform" method="post">
               <div id="login-form" class="login-form">
                 <div id="form-title" class="form-title">Authentication</div>
                 <img id="close-btn" class="close-btn"src="./public/assets/close.png" alt="">
