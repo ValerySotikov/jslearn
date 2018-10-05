@@ -94,7 +94,7 @@ main {
 .password-label,
 .passconf-label {
   margin: auto;
-  margin-left: .5em;
+  margin-left: 1.4em;
   font-size: 1.2em;
 }
 
@@ -115,9 +115,9 @@ main {
   outline: none;
   border: .05em solid;
   margin: auto;
-  margin-right: .5em;
-  padding-left: 1em;
-  padding-right: 1em;
+  margin-right: 1.4em;
+  padding-left: .5em;
+  padding-right: .5em;
 }
 
 .login-input {
@@ -139,7 +139,7 @@ main {
 .submit-login-btn,
 .submit-auth-btn {
   margin: auto;
-  margin-right: .5em;
+  margin-right: 1em;
   padding: .4em .8em .4em .8em;
   background-color: #34a936;
   border: none;

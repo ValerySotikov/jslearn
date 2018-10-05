@@ -15,6 +15,9 @@ class AuthForm {
 
     let content = this.template();
     wrapper.innerHTML = content;
+    wrapper.addEventListener('submit', () => {
+      return false;
+    });
 
     if ( this.otherFormOnPage() ) {
       document.body.querySelector('.content')
@@ -60,27 +63,12 @@ class SignForm extends AuthForm {
     return document.querySelector('.login-form');
   }
 
-  // submitForm() {
-  //   const password = document.querySelector('.password-input').value;
-  //   const confirmedPassword = document.querySelector('.passconf-input').value;
-
-  //   if (password !== confirmedPassword)
-
-  //   const body = {
-  //     return {
-  //       document.querySelector('.login-input');
-  //     };
-  //   }
-
-  //   const request = new XMLHttpRequest('POST', 'http://127.0.0.1:3000');
-  // }
-
   template() {
-    return `<form action="http://127.0.0.1:3000/auth" name="signform">
+    return `<form action="" name="signform" method="post">
               <div id="sign-form" class="sign-form">
                 <div id="form-title" class="form-title">Authorization</div>
                 <div>
-                  <img id="close-btn" class="close-btn"src="./assets/close.png" alt="">
+                  <img id="close-btn" class="close-btn"src="./public/assets/close.png" alt="">
                 </div>
                 <label id="login-label" class="login-label" for="login-input">
                   Enter login
@@ -109,15 +97,11 @@ class LoginForm extends AuthForm {
     return (document.querySelector('.sign-form'));
   }
 
-  // submitForm() {
-  //   const request = new XMLHttpRequest('POST');
-  // }
-
   template() {
-    return  `<form action="http://127.0.0.1:3000/auth" name="loginform">
+    return  `<form action="" name="loginform" method="post">
               <div id="login-form" class="login-form">
                 <div id="form-title" class="form-title">Authentication</div>
-                <img id="close-btn" class="close-btn"src="./assets/close.png" alt="">
+                <img id="close-btn" class="close-btn"src="./public/assets/close.png" alt="">
                 <label id="login-label" class="login-label" for="login-input">
                   User login
                 </label>

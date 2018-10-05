@@ -1,12 +1,11 @@
-const http = require('http');
-const fs = require('fs');
-
+const express = require('express');
+const app = express();
 const PORT = 3000;
-const server = http.createServer();
-server.on('request', (req, res) => {
-  res.sendFile('../client/index.html');
+
+require('./launch')(app);
+
+app.listen(PORT, () => {
+  console.log('Server started at port', PORT, '...');
 });
 
-
-server.listen(PORT);
-console.log('Server started at port', PORT);
+module.exports = app;
